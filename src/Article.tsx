@@ -22,10 +22,13 @@ const Article = () => {
 
     const { title, subtitle, image, date, author } = data || {}
 
+    const articleImageUrl = `src/assets/${image}`
+    const avatarUrl = `src/assets/${author?.avatar}`
+
     return (
         <article>
             <div className="image-wrapper">
-                <img src={image} alt="" className='article-image' />
+                <img src={articleImageUrl} alt="Image representing the article" className='article-image' />
             </div>
 
             <section className="content">
@@ -34,7 +37,7 @@ const Article = () => {
 
                 <div className="author-and-share">
                     <div className="author">
-                        <img src={author?.avatar} alt="" className='author-avatar' />
+                        <img src={avatarUrl} alt="Avatar of the author" className='author-avatar' />
                         <div className="author-name-and-date">
                             <a className='author-name'>{author?.name}</a>
                             <p className='date'>{date}</p>
@@ -48,7 +51,7 @@ const Article = () => {
                         </button>
 
                         <AnimatePresence>
-                            {showShareOptions && image && <ShareOptions image={image} />}
+                            {showShareOptions && articleImageUrl && <ShareOptions image={articleImageUrl} />}
                         </AnimatePresence>
                     </div>
 
