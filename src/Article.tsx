@@ -1,5 +1,5 @@
 import './styles/App.css'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useRef } from 'react'
 
 import { ArticleData } from './types'
 import { useQuery } from '@tanstack/react-query'
