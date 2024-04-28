@@ -165,6 +165,8 @@ article .content .author-and-share .share .share-options::after {
   }
   article .content .author-and-share .share button.share-button:hover {
     background-color: hsl(214, 17%, 51%);
+  }
+  article .content .author-and-share .share button.share-button:hover svg path {
     fill: white;
   }
   article .content .author-and-share .share .share-options svg {
