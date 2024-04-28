@@ -22,8 +22,8 @@ const Article = () => {
 
     const { title, subtitle, image, date, author } = data || {}
 
-    const articleImageUrl = `src/assets/${image}`
-    const avatarUrl = `src/assets/${author?.avatar}`
+    const articleImageUrl = `/assets/${image}`
+    const avatarUrl = `/assets/${author?.avatar}`
 
     return (
         <article>
